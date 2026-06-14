@@ -132,7 +132,6 @@ bool save_process(save_ctx_t *ctx) {
         return false;
     }
 
-    /* Le bypass est ici : on valide avec le CMAC au lieu du Hash */
     if (!save_process_header(ctx) || (ctx->header_cmac_validity == VALIDITY_INVALID)) {
         /* Try to parse Header B. */
         if (substorage_read(&ctx->base_storage, &ctx->header, sizeof(ctx->header), sizeof(ctx->header)) != sizeof(ctx->header)) {

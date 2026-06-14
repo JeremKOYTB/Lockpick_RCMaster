@@ -45,7 +45,6 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #include <stdlib.h>
 #include <string.h>
 
-/* --- AJOUT DU DRAPEAU GLOBAL --- */
 bool g_cmac_bypassed = false;
 
 static void save_init_journal_ivfc_storage(save_ctx_t *ctx, hierarchical_integrity_verification_storage_ctx_t *out_ivfc, int integrity_check_level) {
